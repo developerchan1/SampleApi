@@ -1,7 +1,5 @@
-'use strict';
-
-exports.ok = function(values, res) {
-  var data = {
+exports.ok = (values, res) => {
+  const data = {
       'status': 200,
       'values': values
   };
@@ -9,8 +7,8 @@ exports.ok = function(values, res) {
   res.end();
 };
 
-exports.notFound = function(res) {
-  var data = {
+exports.notFound = (res) => {
+  const data = {
       'status': 404,
       'error': "Resource not found"
   };
@@ -18,8 +16,8 @@ exports.notFound = function(res) {
   res.end();
 };
 
-exports.error = function(reason, res) {
-  var data = {
+exports.error = (reason, res) => {
+  const data = {
       'status': 400,
       'reason': reason
   };
